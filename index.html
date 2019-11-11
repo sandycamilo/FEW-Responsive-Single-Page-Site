@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bees</title>
+
+    <style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px 100px 50px;
+        grid-gap: 10px 10px;
+        grid-template-areas: "h h l"
+                             "s m m"
+                             "s m m"
+                             "f f f";
+    }
+
+    .login {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+    .footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .main {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .sidebar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    .header { 
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .box{
+        background-color: red;
+    }  
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box header">header</div>
+        <div class="box sidebar">sidebar</div>
+        <div class="box main">main</div>
+        <div class="box footer">footer</div>
+        <div class="box login">login</div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+    
+
