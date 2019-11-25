@@ -4,64 +4,98 @@
     <title>Bees</title>
 
     <style>
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 100px 100px 50px;
-        grid-gap: 10px 10px;
-        grid-template-areas: "h h l"
-                             "s m m"
-                             "s m m"
-                             "f f f";
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border: 1px solid black;
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    .container >  * {
+        border: 1px solid white;
     }
 
-    .login {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
+    .navbar {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        height: 100px;
+        background-color: darkolivegreen;
 
     }
-    .footer {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 5;
+
+    .navbar > * {
+        border: .5px solid red;
+        width: 3%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        
     }
 
-    .main {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 4;
+    .main_body {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        height: 500px;
+    }
+
+    .main_body > * {
+        border: 1px solid salmon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .sidebar {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 4;
+        width: 0%;  
+    }
+    .card1 {
+        width: 50%;
+    }
+    .footer {
+        height: 100px;
+        width: 100%;
     }
 
-    .header { 
-        grid-column-start: 1;
-        grid-column-end: 3;
+    .footer p {
+        border: 1px dotted blue;
+        display: flex;
+        justify-content: center;
     }
-
-    .box{
-        background-color: red;
-    }  
+    
+  
+    li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    } 
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box header">header</div>
-        <div class="box sidebar">sidebar</div>
-        <div class="box main">main</div>
-        <div class="box footer">footer</div>
-        <div class="box login">login</div>
-        <div class="box"></div>
+        <div class="navbar">
+                <button>Home</button>
+                <button>About</button>
+                <button>Contact</button>
+        </div>
+        <div class="main_body">
+            <p class="card1">dog
+             
+            </p>    
+            <p class="card2">mountain
+               
+            </p>
+            <p class="card3">sunset
+              
+            </p>
+        </div>
+        <div class="footer">
+            <p>contact</p>
+        </div>
     </div>
 </body>
 </html>
